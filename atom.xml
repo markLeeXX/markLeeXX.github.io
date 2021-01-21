@@ -6,7 +6,7 @@
   <link href="http://hookandroid.com/atom.xml" rel="self"/>
   
   <link href="http://hookandroid.com/"/>
-  <updated>2020-11-05T08:32:56.910Z</updated>
+  <updated>2021-01-21T11:06:16.580Z</updated>
   <id>http://hookandroid.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>c语言入门</title>
+    <link href="http://hookandroid.com/post/c.html"/>
+    <id>http://hookandroid.com/post/c.html</id>
+    <published>2021-01-21T06:53:13.000Z</published>
+    <updated>2021-01-21T11:06:16.580Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="宏定义"><a href="#宏定义" class="headerlink" title="宏定义"></a>宏定义</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> time 2021</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> M(x, y) time*(x&gt;y?x:y)</span></span><br></pre></td></tr></table></figure><h4 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">100</span>;</span><br><span class="line"><span class="keyword">int</span> *b = &amp;a; <span class="comment">// 内存地址赋值</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"值1：%d, %d\n"</span>, a, *b);</span><br><span class="line"></span><br><span class="line">*b = <span class="number">200</span>; <span class="comment">// 真正赋值</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"值2：%d, %d\n"</span>, a, *b);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"内存地址：%#x, %#x\n"</span>, a, *b);</span><br><span class="line"></span><br><span class="line">b++;<span class="comment">// 主动修改内存地址</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"值3：%d, %d\n"</span>, a, *b);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"内存地址：%#x, %#x\n"</span>, a, *b);</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> arr[] = &#123;<span class="number">66</span>, <span class="number">15</span>, <span class="number">100</span>, <span class="number">888</span>, <span class="number">252</span>&#125;;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d\n"</span>, <span class="keyword">sizeof</span>(arr));</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d\n"</span>, <span class="keyword">sizeof</span>(<span class="keyword">int</span>));</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> len = <span class="keyword">sizeof</span>(arr) / <span class="keyword">sizeof</span>(<span class="keyword">int</span>);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"数组长度：%d\n"</span>, len);</span><br><span class="line"></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"值：%d\n"</span>, *(arr + <span class="number">1</span>));<span class="comment">// 等价</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"值：%d\n"</span>, arr[<span class="number">1</span>]);<span class="comment">// 等价</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> *p = arr;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"指针：%d\n"</span>, *(p + <span class="number">1</span>));<span class="comment">// 15 取数组第一个数字</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"指针：%d\n"</span>, *p + <span class="number">1</span>);<span class="comment">// 67 取数组第0个数字+1</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"指针：%d\n"</span>, *p++);<span class="comment">// 66</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"指针：%d\n"</span>, *p);<span class="comment">// 15</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"指针：%d\n"</span>, *++p);<span class="comment">// 100</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"指针：%d\n"</span>, ++*p);<span class="comment">// 101</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"指针：%d\n"</span>, *p);<span class="comment">// 101</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h4 id=&quot;宏定义&quot;&gt;&lt;a href=&quot;#宏定义&quot; class=&quot;headerlink&quot; title=&quot;宏定义&quot;&gt;&lt;/a&gt;宏定义&lt;/h4&gt;&lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span </summary>
+      
+    
+    
+    
+    
+    <category term="C语言" scheme="http://hookandroid.com/tags/C%E8%AF%AD%E8%A8%80/"/>
+    
+  </entry>
   
   <entry>
     <title>nginx配置</title>
