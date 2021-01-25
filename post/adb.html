@@ -21,15 +21,15 @@
     
     
     <meta name="keywords" content="adb">
-    <meta name="description" content="卸载系统应用1234567891011adb shell pm uninstall [-k] [--user USER_ID] 包名参数说明：-k 卸载应用且保留数据与缓存，如果不加 -k 则全部删除。--user 指定用户 id，Android 系统支持多个用户，默认用户只有一个，id&#x3D;0。可以用这个命令，user 和 debug 版本都可以用，所有应用都能卸载掉。比如这里卸载 360">
+    <meta name="description" content="Windows连接脚本1234@echo offcd &#x2F;d H:\Android\SDK\platform-toolsadb connect 127.0.0.1:7555pause  卸载系统应用1234567891011adb shell pm uninstall [-k] [--user USER_ID] 包名参数说明：-k 卸载应用且保留数据与缓存，如果不加 -k 则全部删除。--">
 <meta property="og:type" content="article">
 <meta property="og:title" content="adb常用命令">
 <meta property="og:url" content="http://hookandroid.com/post/adb.html">
 <meta property="og:site_name" content="mark&#39;s BLOG">
-<meta property="og:description" content="卸载系统应用1234567891011adb shell pm uninstall [-k] [--user USER_ID] 包名参数说明：-k 卸载应用且保留数据与缓存，如果不加 -k 则全部删除。--user 指定用户 id，Android 系统支持多个用户，默认用户只有一个，id&#x3D;0。可以用这个命令，user 和 debug 版本都可以用，所有应用都能卸载掉。比如这里卸载 360">
+<meta property="og:description" content="Windows连接脚本1234@echo offcd &#x2F;d H:\Android\SDK\platform-toolsadb connect 127.0.0.1:7555pause  卸载系统应用1234567891011adb shell pm uninstall [-k] [--user USER_ID] 包名参数说明：-k 卸载应用且保留数据与缓存，如果不加 -k 则全部删除。--">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-11-03T10:24:39.000Z">
-<meta property="article:modified_time" content="2020-11-06T09:45:07.689Z">
+<meta property="article:modified_time" content="2021-01-25T09:54:36.985Z">
 <meta property="article:author" content="mark">
 <meta property="article:tag" content="adb">
 <meta name="twitter:card" content="summary">
@@ -158,7 +158,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#卸载系统应用"><span class="post-toc-number">1.</span> <span class="post-toc-text">卸载系统应用</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#debug模式启动apk"><span class="post-toc-number">2.</span> <span class="post-toc-text">debug模式启动apk</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#查看栈顶Activity"><span class="post-toc-number">3.</span> <span class="post-toc-text">查看栈顶Activity</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Windows连接脚本"><span class="post-toc-number">1.</span> <span class="post-toc-text">Windows连接脚本</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#卸载系统应用"><span class="post-toc-number">2.</span> <span class="post-toc-text">卸载系统应用</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#debug模式启动apk"><span class="post-toc-number">3.</span> <span class="post-toc-text">debug模式启动apk</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#查看栈顶Activity"><span class="post-toc-number">4.</span> <span class="post-toc-text">查看栈顶Activity</span></a></li></ol>
         </nav>
     </aside>
 
@@ -182,7 +182,9 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h4 id="卸载系统应用"><a href="#卸载系统应用" class="headerlink" title="卸载系统应用"></a>卸载系统应用</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">adb shell pm uninstall [-k] [--user USER_ID] 包名</span><br><span class="line">参数说明：</span><br><span class="line">-k 卸载应用且保留数据与缓存，如果不加 -k 则全部删除。</span><br><span class="line">--user 指定用户 id，Android 系统支持多个用户，默认用户只有一个，id&#x3D;0。</span><br><span class="line">可以用这个命令，user 和 debug 版本都可以用，所有应用都能卸载掉。</span><br><span class="line"></span><br><span class="line">比如这里卸载 360 浏览器：</span><br><span class="line">adb shell pm uninstall -k --user 0 com.qihoo.browser</span><br><span class="line"></span><br><span class="line">恢复安装</span><br><span class="line">adb shell pm install-existing --user 0 com.qihoo.browser</span><br></pre></td></tr></table></figure>
+            <h4 id="Windows连接脚本"><a href="#Windows连接脚本" class="headerlink" title="Windows连接脚本"></a>Windows连接脚本</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">cd &#x2F;d H:\Android\SDK\platform-tools</span><br><span class="line">adb connect 127.0.0.1:7555</span><br><span class="line">pause</span><br></pre></td></tr></table></figure>
+
+<h4 id="卸载系统应用"><a href="#卸载系统应用" class="headerlink" title="卸载系统应用"></a>卸载系统应用</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">adb shell pm uninstall [-k] [--user USER_ID] 包名</span><br><span class="line">参数说明：</span><br><span class="line">-k 卸载应用且保留数据与缓存，如果不加 -k 则全部删除。</span><br><span class="line">--user 指定用户 id，Android 系统支持多个用户，默认用户只有一个，id&#x3D;0。</span><br><span class="line">可以用这个命令，user 和 debug 版本都可以用，所有应用都能卸载掉。</span><br><span class="line"></span><br><span class="line">比如这里卸载 360 浏览器：</span><br><span class="line">adb shell pm uninstall -k --user 0 com.qihoo.browser</span><br><span class="line"></span><br><span class="line">恢复安装</span><br><span class="line">adb shell pm install-existing --user 0 com.qihoo.browser</span><br></pre></td></tr></table></figure>
 
 <h4 id="debug模式启动apk"><a href="#debug模式启动apk" class="headerlink" title="debug模式启动apk"></a>debug模式启动apk</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">debug启动</span><br><span class="line">adb shell am start -D -n com.ali.tg.testapp&#x2F;.MainActivity</span><br><span class="line"></span><br><span class="line">等待debug</span><br><span class="line">adb shell am set-debug-app -w com.example.jishuxiaoheiwu.appdebugsample</span><br><span class="line"></span><br><span class="line">设置持久debug</span><br><span class="line">adb shell am set-debug-app -w --persistent  com.example.jishuxiaoheiwu.appdebugsample</span><br><span class="line"></span><br><span class="line">清除持久debug</span><br><span class="line">adb shell am clear-debug-app</span><br></pre></td></tr></table></figure>
 
@@ -194,7 +196,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2020-11-06T09:45:07.689Z" itemprop="dateUpdated">2020年11月06日 17:45:07</time>
+    最后更新时间：<time datetime="2021-01-25T09:54:36.985Z" itemprop="dateUpdated">2021年01月25日 17:54:36</time>
 </span><br>
 
 

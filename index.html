@@ -456,7 +456,9 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        卸载系统应用1234567891011adb shell pm uninstall [-k] [--user USER_ID] 包名参数说明：-k 卸载应用且保留数据与缓存，如果不加 -k 则全部删除。--user 指定用户 id，Android 系统支持多个用户，默认用户只有一个，id&#x3D;0。可以用这个命令，user 和 debug 版本都可以用，所有应用都能卸载掉。比如这里卸载 ...
+        Windows连接脚本1234@echo offcd &#x2F;d H:\Android\SDK\platform-toolsadb connect 127.0.0.1:7555pause
+
+卸载系统应用1234567891011adb shell pm uninstall [-k] [--user USER_ID] 包名参数说明：-k 卸载应用且保留数据与缓存，如果不加 -k 则全部删除...
     
 
         <a href="/post/adb.html" class="post-more waves-effect waves-button">
