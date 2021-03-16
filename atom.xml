@@ -6,7 +6,7 @@
   <link href="http://hookandroid.com/atom.xml" rel="self"/>
   
   <link href="http://hookandroid.com/"/>
-  <updated>2021-03-16T07:08:29.609Z</updated>
+  <updated>2021-03-16T10:41:35.699Z</updated>
   <id>http://hookandroid.com/</id>
   
   <author>
@@ -18,14 +18,16 @@
   
   <entry>
     <title>kotlin教程</title>
-    <link href="http://hookandroid.com/post/null.html"/>
-    <id>http://hookandroid.com/post/null.html</id>
+    <link href="http://hookandroid.com/post/kotlin.html"/>
+    <id>http://hookandroid.com/post/kotlin.html</id>
     <published>2021-03-16T07:08:29.000Z</published>
-    <updated>2021-03-16T07:08:29.609Z</updated>
+    <updated>2021-03-16T10:41:35.699Z</updated>
     
     
     
     
+    
+    <category term="kotlin" scheme="http://hookandroid.com/tags/kotlin/"/>
     
   </entry>
   
